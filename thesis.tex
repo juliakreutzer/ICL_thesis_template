@@ -1,0 +1,108 @@
+\input{header.tex} % Importiere die Einstellungen aus der Präambel
+% hier beginnt der eigentliche Inhalt
+\begin{document}
+\sffamily
+\pagenumbering{Roman} % große Römische Seitenummerierung
+\pagestyle{empty}
+%\selectlanguage{english}
+
+% Titelseite
+\clearscrheadings\clearscrplain
+
+
+\begin{flushright}
+\includegraphics[height=40mm]{graphics/unihei_logo_bl.pdf} 
+\vspace{20mm}
+\end{flushright}
+
+\begin{center}
+
+\begin{Huge}
+\vspace{2.5mm}
+\textbf{My Thesis}
+\end{Huge}
+
+
+\vspace{20mm}
+\begin{large}
+Bachelor / Master Thesis\\
+Date, Year\\
+%\vspace{0.4cm}
+
+\vspace{1 cm}
+My name\\
+me@cl.uni-heidelberg.de\\
+\end{large}
+\vspace{2cm}
+
+\begin{Large}
+Institut für Computerlinguistik\\ % remove either en or de
+\vspace{3mm}
+\end{Large}{\Large Ruprecht-Karls-Universität Heidelberg}\\ %remove either en or de
+\vspace{2cm}
+
+\begin{tabular}{ll}
+\textbf{Supervisor} & My supervisor\\
+\textbf{Reviewers} & My reviewer 1\\
+ & My reviewer 2\\
+\end{tabular}
+\end{center}
+
+\clearpage
+
+
+\pagestyle{useheadings} % normale Kopf- und Fußzeilen für den Rest
+
+\chapter*{Abstract}\label{c.abstract}
+Abstract in English
+
+\clearpage
+\chapter*{Zusammenfassung}\label{c.zusammenfassung}
+\foreignlanguage{ngerman}{
+Zusammenfasssung auf Deutsch
+}
+
+\clearpage
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+
+% richtiger Inhalt
+\clearpage
+\pagenumbering{arabic} % ab jetzt die normale arabische Nummerierung
+\chapter{Introduction}\label{c.introduction}
+\input{chapter/introduction.tex}
+
+\clearpage
+\chapter{Related Work}\label{c.related}
+\input{chapter/related.tex}
+
+\clearpage
+\chapter{Methods}\label{c.methods}
+\input{chapter/methods.tex}
+
+\clearpage
+\chapter{Experiments}\label{c.experiments}
+\input{chapter/experiments.tex}
+
+\clearpage
+\chapter{Discussion}\label{c.discussion}
+\input{chapter/discussion.tex}
+
+\clearpage 
+\chapter{Conclusion}\label{c.conclusion}
+\input{chapter/conclusion.tex}
+
+% Anhang
+\clearpage
+\appendix
+\chapter{Appendix}
+\input{chapter/appendix.tex}
+
+\clearpage
+%\bibliographystyle{natbib}
+\bibliography{references}
+
+\end{document}
