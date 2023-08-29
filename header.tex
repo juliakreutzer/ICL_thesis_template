@@ -1,3 +1,5 @@
+% \RequirePackage{scrlfile}
+% \ReplacePackage{scrpage2}{scrlayer-scrpage}
 \documentclass[fontsize=12pt, paper=a4, headinclude, twoside=false, parskip=half+, pagesize=auto, numbers=noenddot, plainheadsepline, open=right, toc=listof, toc=bibliography]{scrreprt}
 % Abstand über Chapter Überschrift verringern
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-10pt}}
@@ -5,7 +7,8 @@
 \pdfminorversion=5
 \pdfobjcompresslevel=1
 % Allgemeines
-\usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
+% \usepackage[automark]{scrpage2} % Kopf- und Fußzeilen
+\usepackage[automark]{scrlayer-scrpage}
 \usepackage{amsmath} % Mathesachen
 \newtheorem{definition}{Definition}
 \usepackage[T1]{fontenc} % Ligaturen, richtige Umlaute im PDF
